@@ -1,0 +1,225 @@
+/* style.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #fffdfd; /* Light gray background */
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.resume-box {
+    background: #fff;
+    border-radius: 5px;
+    padding: 80px;
+    width: 100%;
+    max-width: 1000px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.resume {
+    color: #333; /* Darker text color */
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+/* Header section */
+#header {
+    text-align: center;
+}
+
+#header p {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #333;
+}
+
+#header a {
+    color: #00835e; /* Blue link color */
+    text-decoration: none;
+}
+
+#header a:hover {
+    text-decoration: underline;
+}
+
+/* Skills section */
+#skills {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.skills-columns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.column {
+    flex: 1;
+    padding: 0 10px;
+    text-align: left;
+}
+
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills-list li {
+    margin-bottom: 10px;
+}
+
+.skills-list p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+    .column {
+        flex: 1 1 50%; /* Two columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .column {
+        flex: 1 1 100%; /* Single column on very small screens */
+    }
+}
+
+/* Certifications section */
+#certifications ul {
+    padding: 0;
+}
+
+#certifications h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#certifications li {
+    margin-bottom: 5px;
+    color: #666;
+}
+
+/* Career Objective section */
+#career-objective h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#career-objective p {
+    color: #666;
+    line-height: 1.5;
+}
+
+#experience {
+    margin-bottom: 20px; /* Example margin for spacing */
+}
+
+.experience-details {
+    margin-bottom: 10px;
+}
+
+.location-date {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the top */
+}
+
+.location-date p {
+    margin: 0;
+}
+
+.location-date p:last-child {
+    text-align: right;
+}
+
+#experience p {
+    color: #666;
+    line-height: 1.5;
+}
+
+#experience ul {
+    padding-left: 20px;
+}
+
+#experience ul li {
+    margin-bottom: 10px;
+}
+
+/* Education section */
+#education h2, #education h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#education p {
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Technical Skills section */
+#technical-skills h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#technical-skills p {
+    color: #666;
+    line-height: 1.5;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.contact-info p {
+    margin: 0 10px;
+    position: relative;
+}
+
+#linkedin-card {
+    position: absolute;
+    top: 50px; /* Adjust based on your layout */
+    left: 50%; /* Adjust based on your layout */
+    transform: translateX(-50%);
+    width: 300px;
+    padding: 20px;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    /* border: 1px solid #ddd; */
+    /* background-image: linear-gradient(
+        180deg,
+        rgba(255,255,255,0.8),
+        rgba(0,0,0,0.6)
+    ); */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 10;
+}
+
+#linkedin-link:hover + #linkedin-card,
+#linkedin-card:hover {
+    display: block;
+}
