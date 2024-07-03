@@ -200,8 +200,8 @@ body, html {
 
 #linkedin-card {
     position: absolute;
-    top: 50px; /* Adjust based on your layout */
-    left: 50%; /* Adjust based on your layout */
+    top: 50px;
+    left: 50%;
     transform: translateX(-50%);
     width: 300px;
     padding: 20px;
@@ -219,7 +219,47 @@ body, html {
     z-index: 10;
 }
 
+#github-card {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    padding: 20px;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 10;
+}
+
+#huggingface-card {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    padding: 20px;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 10;
+}
+
 #linkedin-link:hover + #linkedin-card,
 #linkedin-card:hover {
+    display: block;
+}
+
+#github-link:hover + #github-card,
+#github-card:hover {
+    display: block;
+}
+
+#huggingface-link:hover + #huggingface-card,
+#huggingface-card:hover {
     display: block;
 }

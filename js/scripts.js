@@ -18,19 +18,60 @@
 document.addEventListener('DOMContentLoaded', function() {
     var linkedinLink = document.getElementById('linkedin-link');
     var linkedinCard = document.getElementById('linkedin-card');
+    var githubLink = document.getElementById('github-link');
+    var githubCard = document.getElementById('github-card');
+    var huggingfaceLink = document.getElementById('huggingface-link');
+    var huggingfaceCard = document.getElementById('huggingface-card');
+
+    function showCard(link, card) {
+        var rect = link.getBoundingClientRect();
+        var top = rect.bottom + window.scrollY;
+        var left = rect.left + window.scrollX;
+        card.style.top = top + 'px';
+        card.style.left = left + 'px';
+        card.style.display = 'block';
+    }
+
+    function hideCard(card) {
+        card.style.display = 'none';
+    }
 
     linkedinLink.addEventListener('mouseover', function() {
-        linkedinCard.style.display = 'block';
+        showCard(linkedinLink, linkedinCard);
+    });
+    githubLink.addEventListener('mouseover', function() {
+        showCard(githubLink, githubCard);
+    });
+    huggingfaceLink.addEventListener('mouseover', function() {
+        showCard(huggingfaceLink, huggingfaceCard);
     });
 
     linkedinLink.addEventListener('mouseout', function(event) {
         if (!linkedinCard.contains(event.relatedTarget)) {
-            linkedinCard.style.display = 'none';
+            hideCard(linkedinCard);
+        }
+    });
+    githubLink.addEventListener('mouseout', function(event) {
+        if (!githubCard.contains(event.relatedTarget)) {
+            hideCard(githubCard);
+        }
+    });
+    huggingfaceLink.addEventListener('mouseout', function(event) {
+        if (!huggingfaceCard.contains(event.relatedTarget)) {
+            hideCard(huggingfaceCard);
         }
     });
 
     linkedinCard.addEventListener('mouseleave', function() {
-        linkedinCard.style.display = 'none';
+        hideCard(linkedinCard);
+    });
+    githubCard.addEventListener('mouseleave', function() {
+        hideCard(githubCard);
+    });
+    huggingfaceCard.addEventListener('mouseleave', function() {
+        hideCard(huggingfaceCard);
     });
 });
+
+
 
