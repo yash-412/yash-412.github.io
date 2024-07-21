@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(48, 48, 48, 0.3);
+    /* overflow: hidden; */
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.section {
+    scroll-snap-align: start;
+    height: 100vh;
+}
+
+.header-container {
+    flex:auto;
+    width: 100vw;
+    height: 3vw;
+    /* background-color: rgba(48, 48, 48, 0.3); */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-container-profile {
+    flex: auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-left: 85%;
+    opacity: 1;
+}
+
+.profile-bar-image {
+    width: 35px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.profile-name {
+    margin-left: 10px;
+    color: rgba(48, 48, 48, 0.8);
+}
+
+.page {
+    background-color: rgba(48, 48, 48, 0.3);
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.body-container {
+    width: 100%;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+}
+
+.profile-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-details {
+    margin-left: 50px;
+}
+
+.profile-details h1 {
+    font-size: 4.5em;
+    margin-bottom: 10px;
+}
+
+.profile-details h3 {
+    font-size: 7em;
+    color: rgba(48, 48, 48, 0.8);
+}
+
+.redes {
+    position: fixed;
+    right: 0;
+    top: 25%;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    transition: left 0.3s ease-in-out;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.redes a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 40px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.redes a svg {
+    width: 30px;
+    fill: #ffffff;
+}
+
+.redes .discord {
+    background-color: rgb(0, 60, 255);
+}
+
+.redes .github {
+    background-color: rgb(24, 22, 22);
+}
+
+.redes .twitter {
+    background-color: #33BBFF;
+}
+
+.redes .instagram {
+    background-color: rgb(255, 251, 0);
+}
+
+.redes a:hover {
+    width: 90px !important;
+}
+
+.header-container-profile-show {
+    opacity: 0;
+    transform: translate(-100%, 100%);
+}
+
+#profile {
+    background-color: #d5fdff;
+    z-index: -2;
+}
+
+.profile-info {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: 100vw;
+    /* border-radius: 10px; */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    /* border: 1px solid rgba(255, 255, 255, 0.2); */
+    padding: 20px;
+    /* color: #fff;  */
+    margin-bottom: 15%;
+    box-sizing: border-box;
+}
+
+.profile-image {
+    margin-left: 15%;
+}
+
+.profile-position {
+    display: grid;
+    position: absolute;
+    align-items: normal;
+    top: 90%;
+    left: 1%;
+    transform: translateY(-50%) rotate(0deg);
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0.15;
+    }
+    10% {
+        opacity: 0.20;
+    }
+    20% {
+        opacity: 0.25;
+    }
+    30% {
+        opacity: 0.3;
+    }
+    40% {
+        opacity: 0.4;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    60% {
+        opacity: 0.4;
+    }
+    70% {
+        opacity: 0.3;
+    }
+    80% {
+        opacity: 0.25;
+    }
+    90% {
+        opacity: 0.20;
+    }
+    100% {
+        opacity: 0.15;
+    }
+}
+
+.background-text1, .background-text2 {
+    position: absolute;
+    font-size: 15vw;
+    color: rgba(0, 0, 0, 0.6);
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: -1;
+    bottom: 0;
+    animation: fade 2s infinite ;
+    /* cubic-bezier(0.68, 0.55, 0.27, 1.55) */
+    opacity: 0.20;
+}
+
+.background-text2 {
+    padding-left: 20vw;
+}
+
+/* .page.profile {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3c0d99;
+} */
+
+#experience {
+    background-color: #fded59;
+}
+
+#projects {
+    background-color: #4a6b6f;
+}
+
+#education {
+    background-color: #ff006c;
+}
+
+#skills {
+    background-color: #5c5b6b;
+}
+
+#contact {
+    background-color: #d5fdff;
+}
